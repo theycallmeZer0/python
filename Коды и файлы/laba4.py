@@ -49,7 +49,7 @@ class l1st(Parentlist):
         if 0 <= item < len(self.dictionary):
             return self.dictionary[item]
         else:
-            raise IndexError("Wrong index.")
+            raise IndexError("Wrong index")
 
     def generator(self): # генератор коллекции
         self.lengh = 0
@@ -66,7 +66,8 @@ class l1st(Parentlist):
                 (key_inp, date1_inp, date2_inp, phone_inp, distance_inp, price_inp) = line.replace("\n", "").split(",")
                 mas.append(Parentlist(key_inp, date1_inp, date2_inp, phone_inp, distance_inp, price_inp))
         return mas
-    def add(self, key_inp, date1_inp, date2_inp, phone_inp, distance_inp, price_inp): # добаление записи о новом студенте
+
+    def add(self, key_inp, date1_inp, date2_inp, phone_inp, distance_inp, price_inp): # добаление записи о новой поездке
         self.dictionary.append(Parentlist(key_inp, date1_inp, date2_inp, phone_inp, distance_inp, price_inp))
         newline = [key_inp, date1_inp, date2_inp, phone_inp, distance_inp, price_inp]
         with open('data.csv', 'a+', newline='') as f:
@@ -85,6 +86,7 @@ class l1st(Parentlist):
 
 
 dictionary = l1st('data.csv')
+
 print("Default mas")
 for x in dictionary:
     print(x)
@@ -94,6 +96,11 @@ print("Iterator")
 iterator = iter(dictionary)
 print(next(iterator))
 print(next(iterator))
+
+print("\nGenerator")
+for x in dictionary.generator():
+    print(x)
+
 
 print("\n__str__ ", dictionary, sep='\n')
 
@@ -115,4 +122,8 @@ print(dictionary.__getitem__(int(input("Enter line pos: "))))
 
 dictionary.add(input('Enter ID: '), input('Enter date and time of begin: '), input('Enter date and time of end: '),
                input('Enter phone number: '), input('Enter distance: '), input('Enter price: '))
+for x in dictionary:
+    print(x)
+print('')
+
 
