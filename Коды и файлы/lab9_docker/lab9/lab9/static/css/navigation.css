@@ -1,0 +1,163 @@
+body {
+    margin: 0px
+}
+
+aside img {
+    width: 300px;
+    float: left;
+}
+
+aside {
+    float: left;
+    background: #070f29;
+    color: white;
+    padding: 2.5%;
+    width: 25%;
+    height: 100vh;
+    border-right: 5px solid #1a2654;
+}
+
+aside .logo {
+    font-size: 40px;
+    fon-weight: bold;
+}
+
+aside h3 {
+    margin-top: 50px;
+    front-size: 20px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: white;
+    display: block;
+    margin-top: 10px;
+    transition: transform .1s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+aside ul li, aside ul a {
+    text-decoration: none;
+}
+
+.rightOffset {
+    margin: 15px;
+}
+
+.registration_panel {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 60px;
+}
+
+.log_in_and_register {
+    margin-right: 20px;
+}
+
+.reg_buttons {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.log_in {
+    background-color: #4a93ff;
+}
+
+.log_in:hover {
+    color: white;
+    background-color:#71a9fc;
+}
+
+.log_in:active {
+    color: white;
+    background-color: #307ae9;
+}
+
+.register {
+    background-color: #2849c2;
+}
+
+.register:hover {
+    color: white;
+    background-color: #315af3;
+}
+
+.register:active {
+    color: white;
+    background-color: #2645b7;
+}
+
+.login_label {
+    color: white;
+    font-size: 18px;
+}
+
+.login {
+    color: white;
+    font-size: 15px;
+    background-color: #4a93ff;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.role_label {
+    color: white;
+    font-size: 18px;
+}
+
+.role {
+    color: #5eb6ff;
+    font-size: 15px;
+    background-color: #27355a;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.data_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sep_line_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin: 0px 15px 0px 15px;
+}
+
+.sep_line {
+    height: 50%;
+    border-left: 1px solid #4b4b4b;
+}

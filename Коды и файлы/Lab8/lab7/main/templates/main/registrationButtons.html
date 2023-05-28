@@ -1,0 +1,32 @@
+<div class="registration_panel">
+    <div class="log_in_and_register">
+        {%if user.is_authenticated%}
+        <div class="data_container">
+
+            <div class="buttons_container">
+                <div class="label">
+                    <div class="login_label">Логин </div>
+                    <div class="login">{{user}}</div>
+                </div>
+
+                <div class="label">
+                    <div class="role_label">Роль </div>
+                    <div class="login">{{role}}</div>
+                </div>
+
+                <div class="sep_line_container">
+                    <div class="sep_line"></div>
+                </div>
+
+                <a href="{% url 'logout' %}" class="register reg_buttons center_table " style="margin-left: 5px">
+                    Выйти
+                </a>
+            </div>
+
+        </diV>
+        {% else %}
+            <a href="{% url 'login' %}" class="log_in reg_buttons">Войти</a>
+            <a href="{% url 'registration' %}" class="register reg_buttons">Зарегестрироваться</a>
+        {% endif %}
+    </div>
+</div>
